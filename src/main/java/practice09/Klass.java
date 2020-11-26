@@ -31,12 +31,12 @@ public class Klass {
             System.out.print("It is not one of us.\n");
     }
 
-    public void appendMember(Student s){
-        if (!students.contains(s))
-            students.add(s);
+    public void appendMember(Student student){
+        if (!students.contains(student))
+            students.add(student);
     }
 
-    public boolean isIn(Student s){
-        return s.getKlass().equals(this);
+    public boolean isIn(Student student){
+        return student.getKlass().equals(this);
     }
 }

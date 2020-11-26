@@ -36,8 +36,9 @@ public class Teacher extends Person {
         }
     }
 
-    public boolean isTeaching (Student s){
-        List<Klass> isTeach = klasses.stream().filter(item -> item.isIn(s)).collect(Collectors.toList());
+    public boolean isTeaching (Student student){
+        //stream().anymatch
+        List<Klass> isTeach = klasses.stream().filter(klass -> klass.isIn(student)).collect(Collectors.toList());
         if (isTeach.isEmpty())
             return false;
         return true;
